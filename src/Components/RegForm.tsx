@@ -17,12 +17,12 @@ export class RegForm extends Component<{ setForm: any }, {}> {
         </div>
         <div className="reg-form__button">
           <ButtonAuthSection text="Регистрация" />
-        </div>
-        <div
+          <div
           className="reg-form__postscript"
           onClick={() => this.props.setForm("authForm")}
         >
           Вы уже зарегистрированы? Войти
+        </div>
         </div>
       </form>
     );
