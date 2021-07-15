@@ -4,10 +4,10 @@ import { ConnectAuthSection } from "./Components/AuthSection";
 import { connect } from 'react-redux';
 import {useSelector} from 'react-redux';
 
-function App() {
+function App(props:any) {
   return (
     <div className="App">
-      <ConnectAuthSection />
+      {!props.isLoggedIn && <ConnectAuthSection /> }
     </div>
   );
 }
