@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "../Style/AuthSection.css";
 import { Header } from "../Blocks/Header";
-import { AuthForm } from "./AuthForm";
-import { RegForm } from "./RegForm";
+import { ConnectAuthForm } from "./AuthForm";
+import { ConnectRegForm } from "./RegForm";
+import { connect } from 'react-redux';
 
 export class AuthSection extends Component<{}, { form: string }> {
   constructor(props: any) {
@@ -15,6 +16,7 @@ export class AuthSection extends Component<{}, { form: string }> {
   setForm = (form: string): void => {
     this.setState({ form: form });
   };
+ 
 
   render() {
     return (
@@ -22,11 +24,16 @@ export class AuthSection extends Component<{}, { form: string }> {
         <div className="authSection__wrapper">
           <Header form={this.state.form} setForm={this.setForm} />
           <main className="authSection__main">
-            {this.state.form === "authForm" && <AuthForm />}
-            {this.state.form === "regForm" && <RegForm setForm={this.setForm} />}
+            {this.state.form === "authForm" && <ConnectAuthForm />}
+            {this.state.form === "regForm" && <ConnectRegForm setForm={this.setForm} />}
           </main>
         </div>
       </section>
     );
   }
 }
+
+export const ConnectAuthSection = connect(
+	null,
+  null
+)(AuthSection);

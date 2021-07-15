@@ -1,4 +1,4 @@
-import { LOG_IN, LOG_OUT } from '../actions.js';
+import { LOG_IN, LOG_OUT, AUTHENTICATE } from '../actions.js';
 
 
 const initialState = {

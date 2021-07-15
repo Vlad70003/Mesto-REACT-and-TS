@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../Style/FormStyle.css";
-import { ButtonAuthSection } from "../Blocks/Button-AuthSection";
+import { connect } from 'react-redux';
 
 export class RegForm extends Component<{ setForm: any }, {}> {
   render() {
@@ -16,7 +16,7 @@ export class RegForm extends Component<{ setForm: any }, {}> {
           />
         </div>
         <div className="reg-form__button">
-          <ButtonAuthSection text="Регистрация" />
+        <input className="button-submit" type="submit" value="Регистрация"/>
           <div
           className="reg-form__postscript"
           onClick={() => this.props.setForm("authForm")}
@@ -28,3 +28,8 @@ export class RegForm extends Component<{ setForm: any }, {}> {
     );
   }
 }
+
+export const ConnectRegForm = connect(
+  null,
+  null
+)(RegForm);

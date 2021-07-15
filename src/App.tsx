@@ -1,14 +1,20 @@
 import React from 'react';
-// import "./styles.css";
 import './App.css';
-import { AuthSection } from "./Components/AuthSection";
+import { ConnectAuthSection } from "./Components/AuthSection";
+import { connect } from 'react-redux';
+import {useSelector} from 'react-redux';
 
 function App() {
   return (
     <div className="App">
-      <AuthSection />
+      <ConnectAuthSection />
     </div>
   );
 }
 
-export default App;
+
+
+export default connect(
+	(state: {isLoggedIn: any}) => ({isLoggedIn: state.isLoggedIn}),
+  null
+)(App);
