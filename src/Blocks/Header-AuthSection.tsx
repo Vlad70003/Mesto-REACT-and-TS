@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import "../Style/AuthSection.css";
+import logotype from '../img/logotype.svg';
 
 type Props = {
   form: string;
   setForm: any;
 };
 
-export class Header extends Component<Props, {}> {
+export class HeaderAuthSection extends Component<Props, {}> {
   render() {
     return (
-      <header className="authSection__header">
-        <div className="authSection__header-logo">Mesto</div>
+      <header className="header">
+        <img src={logotype} alt="logotype" />
         {this.props.form === "authForm" && (
           <button
             className="authSection__header-button"

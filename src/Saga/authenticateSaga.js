@@ -8,7 +8,7 @@ export function* authenticateSaga(action) {
     if (success.success) {
       let storage = localStorage;
       storage['userLogin'] = JSON.stringify([email, password, success.token]);
-      yield put(logIn());
+      yield put(logIn(email));
     } 
   }
   

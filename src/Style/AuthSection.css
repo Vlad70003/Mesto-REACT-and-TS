@@ -10,9 +10,10 @@
   height: 100%;
   margin: 0;
 }
-.authSection__header {
+.header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 0;
   border-bottom: 1px rgba(225, 225, 225, 0.3) solid;
 }

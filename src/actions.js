@@ -8,4 +8,4 @@ export const logOut = () => ({type: LOG_OUT});
 export const authenticate = (email, password) => ({
     type: AUTHENTICATE, 
     payload: {email, password}
-    });
+});

@@ -1,8 +1,9 @@
-import { LOG_IN, LOG_OUT, AUTHENTICATE } from '../actions.js';
+import { LOG_IN, LOG_OUT } from '../actions.js';
 
 
 const initialState = {
   isLoggedIn: false,
+  email: '',
 }
 
 
@@ -12,7 +13,7 @@ export default function reducer(state = initialState, action){
   	case LOG_IN: {
     return {
       ...state, 
-      isLoggedIn: true,
+      isLoggedIn: true, 
     }
     }
     case LOG_OUT: {
