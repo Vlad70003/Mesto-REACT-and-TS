@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Style/FormStyle.css";
+import "../../Style/FormStyle.css";
 import { connect } from 'react-redux';
 
 export class RegForm extends Component<{ setForm: any }, {}> {

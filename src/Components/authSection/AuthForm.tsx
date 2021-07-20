@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../Style/FormStyle.css";
-import { authenticate } from "../actions";
+import "../../Style/FormStyle.css";
+import { authenticate } from "../../actions";
 import { connect } from 'react-redux';
 
 type typeState = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../Style/AuthSection.css";
-import { Header } from "../Blocks/Heade-AuthSection";
+import "../../Style/AuthSection.css";
+import { Header } from "../../Blocks/Header-AuthSection";
 import { ConnectAuthForm } from "./AuthForm";
 import { ConnectRegForm } from "./RegForm";
 import { connect } from 'react-redux';
