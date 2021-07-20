@@ -2,11 +2,13 @@
   width: 100%;
   height: 100%;
   background-color: black;
+  display: flex;
+  justify-content: center;
 }
 .authSection__wrapper {
-  width: 100%;
+  width: 880px;
   height: 100%;
-  padding: 0 20%;
+  margin: 0;
 }
 .authSection__header {
   display: flex;
