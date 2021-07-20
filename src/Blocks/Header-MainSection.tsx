@@ -8,6 +8,7 @@ let email = JSON.parse(storage["userLogin"]);
 
 
 type PropsType = {
+  readonly logOut: any,
 };
 
 
